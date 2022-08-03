@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/valueFragment">
+
+    <fragment
+        android:id="@+id/valueFragment"
+        android:name="com.example.value.presentation.screens.value.ValueFragment"
+        android:label="Popular"
+        tools:layout="@layout/fragment_value">
+        <action
+            android:id="@+id/action_valueFragment_to_favoritesValueFragment"
+            app:destination="@id/favoritesValueFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesValueFragment"
+        android:name="com.example.value.presentation.screens.favorites.FavoritesValueFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites_value" />
+</navigation>
